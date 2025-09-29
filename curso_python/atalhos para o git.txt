@@ -1,0 +1,36 @@
+Subir um projeto no GitHub
+# 1. Inicia o Git na pasta do projeto (só na primeira vez)
+git init
+
+# 2. Adiciona todos os arquivos
+git add .
+
+# 3. Faz o commit inicial
+git commit -m "Primeiro commit"
+
+# 4. Conecta com o repositório do GitHub
+git remote add origin https://github.com/seu-usuario/nome-do-repositorio.git
+
+# 5. Garante que está na branch main
+git branch -M main
+
+# 6. Envia para o GitHub
+git push -u origin main
+
+--------------------------------
+Depois (quando editar um arquivo)
+
+# 1. Verifica o status do que mudou
+git status
+
+# 2. Adiciona as mudanças
+git add nome_do_arquivo   # adiciona só esse arquivo
+# OU
+git add .                 # adiciona todos os arquivos alterados
+
+# 3. Faz um commit com uma mensagem
+git commit -m "Descrição das alterações"
+
+# 4. Envia para o GitHub
+git push
+
