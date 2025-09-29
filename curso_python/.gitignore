@@ -1,0 +1,16 @@
+# Arquivos temporários do Windows
+Thumbs.db
+Desktop.ini
+
+# Arquivos temporários do Excel
+~$*.xlsx
+
+# Arquivos temporários do Word
+~$*.docx
+
+# Arquivos do VS Code
+.vscode/
+
+# Arquivos de Python compilados
+*.pyc
+__pycache__/

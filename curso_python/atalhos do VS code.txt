@@ -1,0 +1,4 @@
+-Pressionar CTRL + C em uma linha inteira, copia tudo;
+-Selecionar uma variável e apertar F2, consegue alterar o nome dele am todos os lugares do código;
+-Comentário de bloco (Ctrl + K, Ctrl + C): Adiciona um # no início de cada linha selecionada;
+-Masonite (Igual laravel, mas de Python)
