@@ -12,8 +12,6 @@ import random
 numero = random.randint(1,10)
 contador = 5
 
-print(numero)
-
 while contador >= 1:
     print('JOGO DE ADIVINHA 🕹️')
     print(f'Atenção!!! Você tem {contador} chances restantes.')
@@ -42,12 +40,10 @@ while contador >= 1:
         continue
         
     else:
-        print(f'Parabéns, você acertou 🤩')
-        print(f'O número que pensei foi {numero}, e você gastou {6 - contador} tentativas.')
-        
+        print(f'Vitória: 🎉 Eu pensei no número {numero} e cocê ganhou em {6 - contador} tentativas!')      
         print('-' * 60)
         break
 
 if contador == 0:
-    print('Você não tem mais tentativas 😞')
+    print(f'Derrota: 😞 Acabaram as chances, o número era {numero}.')
     print('-' * 60)
