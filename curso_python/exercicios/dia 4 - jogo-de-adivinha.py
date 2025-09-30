@@ -40,7 +40,7 @@ while contador >= 1:
         continue
         
     else:
-        print(f'Vitória: 🎉 Eu pensei no número {numero} e cocê ganhou em {6 - contador} tentativas!')      
+        print(f'Vitória: 🎉 Eu pensei no número {numero} e você ganhou em {6 - contador} tentativas!')      
         print('-' * 60)
         break
 
