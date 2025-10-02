@@ -13,6 +13,7 @@
 # print('zero' not in nome)
 
 nome = input('Digite seu nome: ')
+print(nome[-4])
 encontrar = input('Digite o que deseja encontrar: ')
 
 if encontrar in nome:
