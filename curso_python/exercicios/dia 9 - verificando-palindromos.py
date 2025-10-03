@@ -1,19 +1,22 @@
 #função que verifica se palavra é palíndromo
 
+print('Tente escrever uma palavra palíndromo 🕹️')
+print('-' * 60)
 
-try:
-    palavra = input('Qual palavra deseja verificar? ')
+palavra = input("Qual palavra deseja verificar? ").lower()
+print('-' * 60)
 
-    def palindromos(a):
-        a = palavra.lower()[::-1]
-        if a == palavra:
-            return print(f'A palavra {a} é uma palindromo.')
-        else:
-            print('Não é palindromo.')
-            exit()
+if not palavra.isalpha():
+    print("Atenção!!! Digite apenas letras, nada de números. ❌")
+    print('-' * 60)
+    exit()
+
+def palindromos(p):
+    if p == p[::-1]:
+        return f'Vitória 🎉: A palavra "{p}" é palíndromo.'
     
-except ValueError:
-    print('Digite um texto.')
-    
+    else:
+        return f'Derrota 😔: A palavra "{p}" não é palíndromo.'
 
-print(palindromos(palavra.lower()))
+print(palindromos(palavra))
+print('-' * 60)
