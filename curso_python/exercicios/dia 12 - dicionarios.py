@@ -1,14 +1,19 @@
 print(f'Agenda de contatos:\n')
-contatos = {'nome':'mateus', 'tel': 123}
 
+def mostrar_contatos(contatos):
+    for chave in contatos:
+        print(f'Nome: {chave} | Telefone: {contatos[chave]}')
+    print('-' * 90)
+    
+contatos = {
+    'mateus': 123,
+    'thays': 456,
+    'laisa': 789
+}
 print(f'Atualmente você possui os contatos abaixo:\n')
-
-for chave in contatos:
-    print(f'{chave}: {contatos[chave]}')
-print('-' * 90)
+mostrar_contatos(contatos)
 
 try:
-    
     acao = input('Deseja alterar algo? (S/N) -> ').upper()
     print('-' * 90)
     
@@ -21,38 +26,52 @@ try:
         
         match opcao:
             case 1:
-                try:
-                    nome = input('Digite o nome: ')
-                    tel = int(input('Digite o número: '))
-                    print('-' * 90)
+                nome = input('Digite o nome: ')
+                tel = int(input('Digite o número: '))
+                print('-' * 90)
                     
-                    if nome != '' and tel != '':
-                        contatos[nome] = tel
-                        print('\nAdicionado com sucesso!')
-                        print('-' * 90)
+                if nome != '' and tel != '':
+                    contatos[nome] = tel
+                    print('Adicionado com sucesso!')
+                    print('-' * 90)
                         
-                    else:
-                        print('Digite algum valor')
-                        print('-' * 90)
-                
-                except ValueError:
+                else:
                     print('Digite algum valor')
                     print('-' * 90)
                     
             case 2:
                 print('Lista de contatos atual:\n')
-                for chave in contatos:
-                    print(f'{chave}: {contatos[chave]}')
-                print('-' * 90)
+                mostrar_contatos(contatos)
                 
-            case 3:
-                ...
+            case 3:                
+                print('Escolha uma opção:\n')
+                print('1- Excluir contato específico;\n2- Excluir todos;')
+                print('-' * 90)        
+                del_opcao = int(input('Digite aqui a opção desejada: '))
+                print('-' * 90) 
+                
+                if del_opcao == 1:
+                    
+                    del_nome = input('Digite o nome para excluir: ')
+
+                    if del_nome in contatos:
+                        contatos.pop(del_nome)
+                        print('\nExcluído com sucesso!')
+                    else:
+                        print('\nNome não encontrado.')
+                else:
+                    contatos.clear()
+                    print('\nTodos os contatos apagados com sucesso!')
 
             case 4:
-                print('Agenda fechada. Até logo!.')
+                print('Agenda fechada. Até logo!')
                 exit()
+                
+    print('Agenda fechada. Até logo!')
+    print('-' * 90)
+    exit()
     
-except:
+except ValueError:
     exit()
 
 
